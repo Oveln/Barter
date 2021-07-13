@@ -1,0 +1,9 @@
+name: Barter
+author: Oveln
+version: 1.0.0
+main: me.oveln.barter.main
+api-version: "1.12.2"
+commands:
+  barter:
+    description: 物物交换
+    usage: /<command>

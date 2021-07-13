@@ -1,0 +1,8 @@
+# %packetname%  合成物品名字
+ShopTitle: "&c碎片商店"
+ShopingTitle: "&c碎片合成"
+PlayerMessage:
+  - "恭喜你合成了%packetname%"
+  - "%player%！！！！！！！！"
+  - "&c这些东西都可以自定义"
+  - "&3支持自定义颜色"
