@@ -35,7 +35,7 @@ public class barter implements CommandExecutor, TabCompleter {
                 if (sender.isOp()) CU.Sendstrings((Player) sender , HelpMessageOP);
                 return true;
             }
-            if (args[0].equals("shop") && args.length == 1) {
+            if (args.length == 1 && args[0].equals("shop")) {
                 Inventory gui = GUI.getShopGUI(0,sender.getName());
                 ((Player) sender).openInventory(gui);
             }

@@ -35,13 +35,12 @@ public class main extends JavaPlugin {
         BartersPath = "plugins/"+descriptionFile.getName()+"/barters.db";
 
         saveDefaultConfig();
-        CheckFile();
 
         try {
             ReadPackets();
             ReadBarters();
         } catch(IOException i) {
-            i.printStackTrace();
+            CheckFile();
         }
         getServer().getPluginManager().registerEvents(new InventoryClick() , this);
         getCommand("barter").setExecutor(new barter());
