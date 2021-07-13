@@ -1,9 +1,9 @@
 package me.oveln.barter;
 
-import net.minecraft.server.v1_12_R1.NBTCompressedStreamTools;
-import net.minecraft.server.v1_12_R1.NBTTagCompound;
-import net.minecraft.server.v1_12_R1.NBTTagList;
-import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
+import net.minecraft.server.v1_8_R3.NBTCompressedStreamTools;
+import net.minecraft.server.v1_8_R3.NBTTagCompound;
+import net.minecraft.server.v1_8_R3.NBTTagList;
+import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -35,13 +35,12 @@ public class main extends JavaPlugin {
         BartersPath = "plugins/"+descriptionFile.getName()+"/barters.db";
 
         saveDefaultConfig();
-        CheckFile();
 
         try {
             ReadPackets();
             ReadBarters();
         } catch(IOException i) {
-            i.printStackTrace();
+            CheckFile();
         }
         getServer().getPluginManager().registerEvents(new InventoryClick() , this);
         getCommand("barter").setExecutor(new barter());
@@ -101,7 +100,7 @@ public class main extends JavaPlugin {
 //            List<ItemStack> packet = new ArrayList<>();
 //            List<String> mappacket = savefile.get(key);
 //            for (String item:mappacket) {
-//                net.minecraft.server.v1_12_R1.ItemStack Item = new net.minecraft.server.v1_12_R1.ItemStack();
+//                net.minecraft.server.v1_8_R3.ItemStack Item = new net.minecraft.server.v1_8_R3.ItemStack();
 //                Item.
 //                packet.add();
 //            }
@@ -132,7 +131,7 @@ public class main extends JavaPlugin {
             List<ItemStack> packet = new ArrayList<>();
             NBTTagList NBTPacket = (NBTTagList) NBTPackets.get(key);
             for (int i = 0;i<NBTPacket.size();i++)
-                packet.add(CraftItemStack.asBukkitCopy(new net.minecraft.server.v1_12_R1.ItemStack(NBTPacket.get(i))));
+                packet.add(CraftItemStack.asBukkitCopy(net.minecraft.server.v1_8_R3.ItemStack.createStack(NBTPacket.get(i))));
             packets.put(key , packet);
         }
         System.out.print("读取了"+packets.size()+"个物品包");

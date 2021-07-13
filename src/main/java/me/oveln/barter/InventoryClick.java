@@ -123,6 +123,7 @@ public class InventoryClick implements Listener {
                 }
                 List<String> strings = main.getInstance().getConfig().getStringList("PlayerMessage");
                 for (String s:strings) {
+                    System.out.print(s);
                     String ret = s.replace("%player%", player.getName()).replace("%packetname%",barter.getY());
                     player.sendMessage(CU.t(ret));
                 }

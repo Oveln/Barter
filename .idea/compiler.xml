@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Barter" />
+        <module name="Barter1.8.8" />
       </profile>
     </annotationProcessing>
   </component>

@@ -16,7 +16,7 @@ public class GUI {
         ItemStack item = new ItemStack(Material.SIGN);
         ItemMeta meta = item.getItemMeta();
         List<String> lore = new ArrayList<>();
-        lore.add("&e玩家名: &f"+playername);
+        lore.add(CU.t("&e玩家名: &f"+playername));
         meta.setLore(lore);
         meta.setDisplayName("第"+(Page+1)+"页");
         item.setItemMeta(meta);

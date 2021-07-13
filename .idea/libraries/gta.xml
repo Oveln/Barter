@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="gta">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/gta.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/lib/gta.jar!/" />
+    </SOURCES>
+  </library>
+</component>
