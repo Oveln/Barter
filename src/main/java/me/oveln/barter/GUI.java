@@ -24,13 +24,13 @@ public class GUI {
 
         item = new ItemStack(Material.PAPER);
         meta = item.getItemMeta();
-        meta.setDisplayName("下一页");
+        meta.setDisplayName(CU.t("&2下一页"));
         item.setItemMeta(meta);
         gui.setItem(53,item);
 
         item = new ItemStack(Material.PAPER);
         meta = item.getItemMeta();
-        meta.setDisplayName("上一页");
+        meta.setDisplayName(CU.t("&2上一页"));
         item.setItemMeta(meta);
         gui.setItem(45,item);
 
